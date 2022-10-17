@@ -10,15 +10,20 @@ function App() {
     setOpened(prevState => !prevState);
   };
 
+// Тернарный
+return (
+<div>{isOpened ? <> <Title name="Products" type="bold" /><Title name="Employees" type="normal" /> </> : <button onClick={handleOpening}>Open title</button>}</div>
+);
+
   // Вариант с &&
-  return (
-    <div>
-      {!isOpened && <button onClick={handleOpening}>Open title</button>}
-      {isOpened && <>
-        <Title name="Products" type="bold" />
-        <Title name="Employees" type="normal" /> </>}
-    </div>
-  );
+  // return (
+  //   <div>
+  //     {!isOpened && <button onClick={handleOpening}>Open title</button>}
+  //     {isOpened && <>
+  //       <Title name="Products" type="bold" />
+  //       <Title name="Employees" type="normal" /> </>}
+  //   </div>
+  // );
 
   // Вариант подлиннее
   // if (!isOpened) {

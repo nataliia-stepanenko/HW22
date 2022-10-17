@@ -6,7 +6,12 @@ const Title = ({ name, type: fontWeight }) => {
 
 Title.propTypes = {
     name: PropTypes.string,
-    type: PropTypes.oneOf(["bold", "normal"])
+    type: PropTypes.oneOf(["normal", "bold"])
 };
+
+Title.defaultProps = {
+    name: "Title",
+    type: "normal"
+}
 
 export default Title;
